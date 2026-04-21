@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа № А-8 | Ввод текста</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Логотип университета (заглушка, замените src на путь к вашему изображению) -->
+        <img src="logo.png" alt="Логотип университета" class="university-logo">
+        <h1>Лабораторная работа № А-8</h1>
+        <p>Шестаков Даниил Романович, Группа 241-352</p>
+    </header>
+
+    <main>
+        <h2>Введите текст для анализа</h2>
+        <form action="result.php" method="POST">
+            <textarea name="data" rows="8" cols="50" placeholder="Введите текст на русском или английском языке..."></textarea>
+            <br>
+            <input type="submit" value="Анализировать">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Шестаков Даниил Романович</p>
+    </footer>
+</body>
+</html>
