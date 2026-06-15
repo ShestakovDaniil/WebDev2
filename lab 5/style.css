@@ -1,0 +1,175 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+#wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Главное меню */
+#main_menu {
+    background-color: #333;
+    padding: 10px;
+    overflow: hidden;
+}
+
+#main_menu a {
+    display: block;
+    float: left;
+    width: 50%;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#main_menu a:hover {
+    background-color: #555;
+}
+
+#main_menu a.selected {
+    background-color: #007bff;
+}
+
+#main_menu a.selected:hover {
+    background-color: #0056b3;
+}
+
+/* Контейнер для бокового меню и контента */
+#container {
+    display: flex;
+    min-height: 400px;
+}
+
+/* Основное меню (слева) */
+#product_menu {
+    width: 150px;
+    background-color: #e9e9e9;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+
+#product_menu a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#product_menu a:hover {
+    background-color: #d0d0d0;
+}
+
+#product_menu a.selected {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#product_menu a.selected:hover {
+    background-color: #0056b3;
+}
+
+/* Основной контент */
+#content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Табличная верстка */
+#tt {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tt td {
+    padding: 15px;
+    vertical-align: top;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    line-height: 1.8;
+}
+
+#tt_single {
+    margin: 0 auto;
+}
+
+#tt_single td {
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    font-size: 1.2em;
+    line-height: 2;
+}
+
+/* Блочная верстка */
+.ttRow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ttRow .col {
+    flex: 1;
+    min-width: 100px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    margin: 5px;
+    line-height: 1.8;
+}
+
+.ttSingleRow {
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    display: inline-block;
+    font-size: 1.2em;
+    line-height: 2;
+}
+
+/* Ссылки на числа */
+#content a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#content a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Подвал */
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Очистка float */
+.clear {
+    clear: both;
+}
