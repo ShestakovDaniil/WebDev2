@@ -1,0 +1,166 @@
+/* Сброс базовых отступов и настройка шрифтов */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+/* Контейнер для центрирования и ограничения ширины контента */
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Стили для режимов отображения */
+.browser-version {
+    border: 1px solid #ddd;
+}
+
+.print-version {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    max-width: 100%;
+    padding: 0;
+}
+
+/* Строка формы: выравнивание по левому краю, flex для расположения label слева */
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+/* Подписи к элементам */
+.form-row label {
+    width: 220px;
+    text-align: left;
+    margin-right: 10px;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+/* Единый размер для всех полей ввода, селектов и textarea */
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row select,
+.form-row textarea {
+    flex-grow: 1;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fafafa;
+    transition: border-color 0.2s;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+    background: #fff;
+}
+
+/* Особые стили для строки с чекбоксом */
+.checkbox-row {
+    align-items: center;
+}
+
+.checkbox-row input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.checkbox-row label {
+    width: auto;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Кнопка "Проверить" оформлена в виде ссылки <a> */
+.btn-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #357abd;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    text-align: center;
+    min-width: 150px;
+}
+
+.btn-link:hover {
+    background-color: #357abd;
+    border-color: #2a629c;
+}
+
+.btn-link:active {
+    transform: scale(0.98);
+}
+
+/* Стили для отчетов */
+.container p, .container b {
+    margin-top: 10px;
+    display: block;
+}
+
+.container b {
+    color: #2c3e50;
+    font-size: 1.1em;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 500px) {
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-row label {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+}
+
+/* ✅ ИСПРАВЛЕНИЕ: Скрываем элементы только при печати, а не на экране */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    body {
+        background: #fff;
+        color: #000;
+    }
+    .container {
+        max-width: 100%;
+        box-shadow: none;
+        background: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    .form-row input, .form-row select, .form-row textarea {
+        border: 1px solid #000;
+        background: #fff;
+        color: #000;
+    }
+}
